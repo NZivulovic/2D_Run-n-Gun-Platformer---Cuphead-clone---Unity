@@ -2,4 +2,4 @@
 
 # Update 23.11.2025
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/5BmYK3L" data-context="false" ><a href="//imgur.com/a/5BmYK3L"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![animation](https://github.com/NZivulovic/2D_Run-n-Gun-Platformer---Cuphead-clone---Unity/blob/2d94595c279a3e3a6236569d72b00f2a27f1e2f5/Timeline%201.webp)
