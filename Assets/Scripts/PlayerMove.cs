@@ -40,7 +40,7 @@ public class PlayerMove : MonoBehaviour
     private void HandleMovement()
     {
         float move_x = Input.GetAxisRaw("Horizontal");
-        float move_y = Input.GetAxisRaw("Vertical");
+        // float move_y = Input.GetAxisRaw("Vertical");
 
         // rb.linearVelocity = new Vector2(move_x * move_speed, rb.linearVelocityY);
         // rb.linearVelocity = new Vector2(rb.linearVelocityX, move_y * move_speed);

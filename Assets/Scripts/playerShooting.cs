@@ -4,11 +4,18 @@ using UnityEngine;
 public class playerShooting : MonoBehaviour
 {
     public GameObject projectile;
+
     public RectTransform projectileStartPosX;
+    public RectTransform projectileStartPosXleft;
+    public RectTransform projectileStartPosXright;
+
     public RectTransform projectileStartPosYleft;
+
     public RectTransform projectileStartPosYright;
 
     private float timer;
+
+    public float fireRate;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,27 +26,38 @@ public class playerShooting : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > .5){
+        if(timer > fireRate){
         shoot();
         }
     }
+    
     private void shoot()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKey(KeyCode.RightArrow))
+        {
+            Instantiate(projectile, projectileStartPosXright.position, quaternion.identity);
+            timer = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && Input.GetKey(KeyCode.LeftArrow))
+        {
+            Instantiate(projectile, projectileStartPosXleft.position, quaternion.identity);
+            timer = 0;
+        }
+        else if (Input.GetKey(KeyCode.UpArrow))
         {
             Instantiate(projectile, projectileStartPosX.position, quaternion.identity);
             timer = 0;
         }
-        if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.UpArrow))
         {
             Instantiate(projectile, projectileStartPosYleft.position, quaternion.identity);
             timer = 0;
         }
-        if (Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.UpArrow))
         {
             Instantiate(projectile, projectileStartPosYright.position, quaternion.identity);
             timer = 0;
         }
-        
     }
+    
 }

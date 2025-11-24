@@ -12,6 +12,9 @@ public class enemyProjectile : MonoBehaviour
     private float timer;
 
     public int damage;
+
+    public float despawnAfterSeconds;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -29,7 +32,7 @@ public class enemyProjectile : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > 10)
+        if (timer > despawnAfterSeconds)
         {
             timer = 0;
             Destroy(gameObject);

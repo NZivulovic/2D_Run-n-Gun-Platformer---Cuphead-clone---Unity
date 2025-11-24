@@ -10,6 +10,8 @@ public class enemyShooting : MonoBehaviour
     public Transform projectileStartPos2;
 
     private float timer;
+    
+    public float fireRate;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +22,7 @@ public class enemyShooting : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if (timer > 2)
+        if (timer > fireRate)
         {
             shoot();
             timer = 0;

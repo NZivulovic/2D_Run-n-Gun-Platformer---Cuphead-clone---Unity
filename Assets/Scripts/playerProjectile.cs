@@ -13,6 +13,8 @@ public class playerProjectile : MonoBehaviour
 
     public int damage;
 
+    public float despawnAfterSeconds;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -38,7 +40,7 @@ public class playerProjectile : MonoBehaviour
     void Update()
     {
         timer += Time.deltaTime;
-        if(timer > 10)
+        if(timer > despawnAfterSeconds)
         {
             timer = 0;
             Destroy(gameObject);

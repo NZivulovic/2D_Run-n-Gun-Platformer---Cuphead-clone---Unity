@@ -169,4 +169,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   force: 20
+  despawnAfterSeconds: 10
   damage: 20

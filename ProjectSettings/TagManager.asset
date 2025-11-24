@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Projectile
   - playerProjectile
+  - LevelExit
   layers:
   - Default
   - TransparentFX
