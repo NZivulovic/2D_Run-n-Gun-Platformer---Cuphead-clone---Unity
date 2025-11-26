@@ -1,2 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.shader linguist-language=C#
+*.shader linguist-language=C#
+*.cginc  linguist-language=C#
+*.hlsl   linguist-language=C#
+
